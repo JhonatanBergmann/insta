@@ -12,19 +12,20 @@ import AddComment from './AddComment'
 
 class Post extends Component {
     render() {
-        return(
+        return (
             <View style={styles.container}>
                 <Image source={this.props.image} style={styles.image} />
-                <Author email='joao@gmail.com' nickname='Joao' />
+                <Author email={this.props.email} nickname={this.props.nickname} />
                 <Comments comments={this.props.comments} />
                 <AddComment />
             </View>
         )
     }
 }
+
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flex: 1
     },
     image: {
         width: Dimensions.get('window').width,
