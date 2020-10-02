@@ -16,13 +16,13 @@ function loginOrProfileRouter() {
     return (
         <Stack.Navigator>
             <Stack.Screen 
-            name='Profile'
-            component={Profile}
+            name='Login'
+            component={Login}
             options={{ headerShown: false }}
             />
             <Stack.Screen 
-            name='Login'
-            component={Login}
+            name='Profile'
+            component={Profile}
             options={{ headerShown: false }}
             />
              <Stack.Screen 
