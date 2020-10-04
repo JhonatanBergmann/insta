@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { login } from '../store/actions/user'
-import { 
+import {
     View,
     Text,
     StyleSheet,
@@ -16,25 +16,33 @@ class Login extends Component {
         password: ''
     }
 
+    componentDidUpdate = prevProps => {
+        if (prevProps.isLoading && !this.props.isLoading) {
+            this.props.navigation.navigate('Profile')
+        }
+    }
+
     login = () => {
         this.props.onLogin({ ...this.state })
-        this.props.navigation.navigate('Profile')
     }
 
     render() {
         return (
             <View style={styles.container}>
-                <TextInput style={styles.input} 
-                    placeholder='Email' autoFocus={true} keyboardType='email-address' 
-                    value={this.state.email} onChangeText={email => this.setState({ email })} />
-                <TextInput style={styles.input} 
-                    placeholder='Senha' secureTextEntry={true} value={this.state.password}
+                <TextInput placeholder='Email' style={styles.input}
+                    autoFocus={true} keyboardType='email-address'
+                    value={this.state.email}
+                    onChangeText={email => this.setState({ email })} />
+                <TextInput placeholder='Senha' style={styles.input}
+                    secureTextEntry={true} value={this.state.password}
                     onChangeText={password => this.setState({ password })} />
-                <TouchableOpacity style={styles.buttom} onPress={this.login}>
+                <TouchableOpacity onPress={this.login} style={styles.buttom}>
                     <Text style={styles.buttomText}>Login</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.buttom} onPress={() => {this.props.navigation.navigate('Register')}}>
-                    <Text style={styles.buttomText}>Criar nova conta...</Text>
+                <TouchableOpacity onPress={() => {
+                    this.props.navigation.navigate('Register')
+                }} style={styles.buttom}>
+                    <Text style={styles.buttomText}>Criar nova conta</Text>
                 </TouchableOpacity>
             </View>
         )
@@ -45,26 +53,38 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center'
-    },
-    input: {
-        marginTop: 20,
-        width: '90%',
-        backgroundColor: '#EEE',
-        height: 40,
-        borderWidth: 1,
-        borderColor: '#333'
+        justifyContent: 'center',
+        backgroundColor: '#FFF'
     },
     buttom: {
-        marginTop: 30,
+        marginTop: 20,
         padding: 10,
-        backgroundColor: '#4286F4'
+        backgroundColor: '#FAFAFA',
+        borderWidth: 1,
+        borderColor: '#D6D6D6',
+        borderRadius: 5
     },
     buttomText: {
         fontSize: 20,
-        color: '#FFF'
+        color: '#545454'
+    },
+    input: {
+        marginTop: 10,
+        width: '90%',
+        backgroundColor: '#FAFAFA',
+        height: 40,
+        borderWidth: 1,
+        borderColor: '#D6D6D6',
+        paddingLeft: 15,
+        borderRadius: 5
     }
 })
+
+const mapStateToProps = ({ user }) => {
+    return {
+        isLoading: user.isLoading
+    }
+}
 
 const mapDispatchToProps = dispatch => {
     return {
@@ -72,5 +92,5 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-/* export default Login */
-export default connect(null, mapDispatchToProps)(Login)
+// export default Login
+export default connect(mapStateToProps, mapDispatchToProps)(Login)

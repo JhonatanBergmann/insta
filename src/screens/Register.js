@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import {
-    View, 
-    Text, 
+    View,
+    Text,
     StyleSheet,
     TouchableOpacity,
     TextInput
 } from 'react-native'
+import { connect } from 'react-redux'
+import { createUser } from '../store/actions/user'
 
 class Register extends Component {
     state = {
@@ -14,19 +16,32 @@ class Register extends Component {
         password: ''
     }
 
+    componentDidUpdate = prevProps => {
+        if (prevProps.isLoading && !this.props.isLoading) {
+            this.setState({
+                name: '',
+                email: '',
+                password: ''
+            })
+            this.props.navigation.navigate('Feed') // our Profile
+        }
+    }
+
     render() {
         return (
             <View style={styles.container}>
-                <TextInput style={styles.input}
-                    placeholder='Nome' autoFocus={true} value={this.state.name}
-                    onChangeTe={name => this.setState({ name })} />
-                <TextInput style={styles.input} 
-                    placeholder='Email' keyboardType='email-address' value={this.state.email}
+                <TextInput placeholder='Nome' style={styles.input}
+                    autoFocus={true} value={this.state.name}
+                    onChangeText={name => this.setState({ name })} />
+                <TextInput placeholder='Email' style={styles.input}
+                    keyboardType='email-address' value={this.state.email}
                     onChangeText={email => this.setState({ email })} />
-                <TextInput style={styles.input}
-                    placeholder='Senha' secureTextEntry={true} value={this.state.password}
+                <TextInput placeholder='Senha' style={styles.input}
+                    secureTextEntry={true} value={this.state.password}
                     onChangeText={password => this.setState({ password })} />
-                <TouchableOpacity styles={styles.buttom} onPress={() => { }}>
+                <TouchableOpacity 
+                    onPress={() => { this.props.onCreateUser(this.state) }} 
+                    style={styles.buttom}>
                     <Text style={styles.buttomText}>Salvar</Text>
                 </TouchableOpacity>
             </View>
@@ -38,26 +53,44 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center'
-    },
-    input: {
-        marginTop: 20,
-        width: '90%',
-        backgroundColor: '#EEE',
-        height: 40,
-        borderWidth: 1,
-        borderColor: '#333',
-        paddingLeft: 15
+        justifyContent: 'center',
+        backgroundColor: '#FFF'
     },
     buttom: {
-        marginTop: 30,
+        marginTop: 20,
         padding: 10,
-        backgroundColor: '#4286F4'
+        backgroundColor: '#FAFAFA',
+        borderWidth: 1,
+        borderColor: '#D6D6D6',
+        borderRadius: 5
     },
     buttomText: {
         fontSize: 20,
-        color: '#FFF'
+        color: '#545454'
+    },
+    input: {
+        marginTop: 10,
+        width: '90%',
+        backgroundColor: '#FAFAFA',
+        height: 40,
+        borderWidth: 1,
+        borderColor: '#D6D6D6',
+        paddingLeft: 15,
+        borderRadius: 5
     }
 })
 
-export default Register
+const mapStateToProps = ({ user }) => {
+    return {
+        isLoading: user.isLoading
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onCreateUser: user => dispatch(createUser(user))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Register)
+// export default Register
