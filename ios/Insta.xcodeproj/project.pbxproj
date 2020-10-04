@@ -33,6 +33,13 @@
 		63D75FDA86CB4401A29E5280 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C36686C4B0E4540BD6BD08C /* SimpleLineIcons.ttf */; };
 		961C16E6975145B181975B13 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A03C394F777A488285C3EE28 /* Zocial.ttf */; };
 		2C0EB4EFC2FE448D8B7C83ED /* shelter.otf in Resources */ = {isa = PBXBuildFile; fileRef = F5B2166F71A546BAA824396B /* shelter.otf */; };
+		B8C01CC3DEAE45969A8204E8 /* countryside.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD9540D15479429C91EC00B4 /* countryside.ttf */; };
+		8EC83955C71A4D9784EC026D /* DavidLibre-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A76790A417434817B7C9D6A2 /* DavidLibre-Bold.ttf */; };
+		5F1292995FBD4859AC3F6BAD /* DavidLibre-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75AC710C3BA1461385FD6355 /* DavidLibre-Medium.ttf */; };
+		6F792620320543299AB083D8 /* DavidLibre-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED07BB09591143188C6D4D91 /* DavidLibre-Regular.ttf */; };
+		B99590FD74D44A0C84B4EDFE /* NanumGothic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6126292DEC747FE840C68A4 /* NanumGothic-Bold.ttf */; };
+		9865311D15CB4065BF676A9F /* NanumGothic-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBF4349DC8154216B50F5730 /* NanumGothic-ExtraBold.ttf */; };
+		C144DF7B13424AE4B705C372 /* NanumGothic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D20132AD32484D0E8A09A634 /* NanumGothic-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +92,13 @@
 		1C36686C4B0E4540BD6BD08C /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		A03C394F777A488285C3EE28 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		F5B2166F71A546BAA824396B /* shelter.otf */ = {isa = PBXFileReference; name = "shelter.otf"; path = "../assets/fonts/shelter.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FD9540D15479429C91EC00B4 /* countryside.ttf */ = {isa = PBXFileReference; name = "countryside.ttf"; path = "../assets/fonts/countryside.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A76790A417434817B7C9D6A2 /* DavidLibre-Bold.ttf */ = {isa = PBXFileReference; name = "DavidLibre-Bold.ttf"; path = "../assets/fonts/DavidLibre-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		75AC710C3BA1461385FD6355 /* DavidLibre-Medium.ttf */ = {isa = PBXFileReference; name = "DavidLibre-Medium.ttf"; path = "../assets/fonts/DavidLibre-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ED07BB09591143188C6D4D91 /* DavidLibre-Regular.ttf */ = {isa = PBXFileReference; name = "DavidLibre-Regular.ttf"; path = "../assets/fonts/DavidLibre-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C6126292DEC747FE840C68A4 /* NanumGothic-Bold.ttf */ = {isa = PBXFileReference; name = "NanumGothic-Bold.ttf"; path = "../assets/fonts/NanumGothic-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BBF4349DC8154216B50F5730 /* NanumGothic-ExtraBold.ttf */ = {isa = PBXFileReference; name = "NanumGothic-ExtraBold.ttf"; path = "../assets/fonts/NanumGothic-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D20132AD32484D0E8A09A634 /* NanumGothic-Regular.ttf */ = {isa = PBXFileReference; name = "NanumGothic-Regular.ttf"; path = "../assets/fonts/NanumGothic-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +226,13 @@
 				1C36686C4B0E4540BD6BD08C /* SimpleLineIcons.ttf */,
 				A03C394F777A488285C3EE28 /* Zocial.ttf */,
 				F5B2166F71A546BAA824396B /* shelter.otf */,
+				FD9540D15479429C91EC00B4 /* countryside.ttf */,
+				A76790A417434817B7C9D6A2 /* DavidLibre-Bold.ttf */,
+				75AC710C3BA1461385FD6355 /* DavidLibre-Medium.ttf */,
+				ED07BB09591143188C6D4D91 /* DavidLibre-Regular.ttf */,
+				C6126292DEC747FE840C68A4 /* NanumGothic-Bold.ttf */,
+				BBF4349DC8154216B50F5730 /* NanumGothic-ExtraBold.ttf */,
+				D20132AD32484D0E8A09A634 /* NanumGothic-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -372,6 +393,13 @@
 				63D75FDA86CB4401A29E5280 /* SimpleLineIcons.ttf in Resources */,
 				961C16E6975145B181975B13 /* Zocial.ttf in Resources */,
 				2C0EB4EFC2FE448D8B7C83ED /* shelter.otf in Resources */,
+				B8C01CC3DEAE45969A8204E8 /* countryside.ttf in Resources */,
+				8EC83955C71A4D9784EC026D /* DavidLibre-Bold.ttf in Resources */,
+				5F1292995FBD4859AC3F6BAD /* DavidLibre-Medium.ttf in Resources */,
+				6F792620320543299AB083D8 /* DavidLibre-Regular.ttf in Resources */,
+				B99590FD74D44A0C84B4EDFE /* NanumGothic-Bold.ttf in Resources */,
+				9865311D15CB4065BF676A9F /* NanumGothic-ExtraBold.ttf in Resources */,
+				C144DF7B13424AE4B705C372 /* NanumGothic-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
