@@ -1,9 +1,10 @@
 import React from 'react'
+import { StyleSheet, Image } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
-import Icon from 'react-native-vector-icons/FontAwesome' 
+import StatusBar from './components/StatusBar'
 
 import Feed from './screens/Feed'
 import AddPhoto from './screens/AddPhoto'
@@ -18,17 +19,27 @@ function loginOrProfileRouter() {
             <Stack.Screen 
             name='Login'
             component={Login}
-            options={{ headerShown: false }}
+            options={{ 
+                headerShown: false
+            }}
             />
             <Stack.Screen 
             name='Profile'
             component={Profile}
-            options={{ headerShown: false }}
+            options={{ 
+                headerShown: false 
+            }}
             />
              <Stack.Screen 
             name='Register'
             component={Register}
-            options={{ title: 'Registrar', }}
+            options={{ 
+                title: 'Registrar',
+                headerShown: true,
+                headerTintColor: '#111111',
+                headerTitleAlign: 'center',
+                headerStyle: { backgroundColor: '#FAFAFA' }
+            }}
             />
         </Stack.Navigator>
     )
@@ -38,16 +49,27 @@ const Tab = createBottomTabNavigator()
 export default function MenuRoutes() {
     return (
         <NavigationContainer>
-            <Tab.Navigator>
+            <StatusBar />
+            <Tab.Navigator
+                tabBarOptions= {{
+                    style: {
+                        backgroundColor: '#FAFAFA',
+                        tabBarLabel: false
+                    }
+                }}
+                >
                 <Tab.Screen
                     name='Feed'
                     component={Feed}
                     options={{
                     tabBarLabel: 'Feed',
                     tabBarIcon: ({ }) => (
-                        <Icon name="home" color={'#000'} size={30} />
+                        <Image
+                        style={styles.bottomTabIcon}
+                        source={require('../assets/imgs/Feed.png')                  
+                        }/>
                     ),
-                    tabBarBadge: 3,
+                    tabBarLabel:() => {return null}
                 }}
                 />
                 <Tab.Screen
@@ -56,8 +78,12 @@ export default function MenuRoutes() {
                     options={{
                     tabBarLabel: 'Add Picture',
                     tabBarIcon: ({ }) => (
-                        <Icon name="camera" color={'#000'} size={30} />
+                        <Image
+                        style={styles.bottomTabIcon}
+                        source={require('../assets/imgs/AddPhoto.png')                  
+                        }/>
                     ),
+                    tabBarLabel:() => {return null}
                 }}
                 />
                 <Tab.Screen
@@ -66,11 +92,23 @@ export default function MenuRoutes() {
                     options={{
                     tabBarLabel: 'Profile',
                     tabBarIcon: ({ }) => (
-                        <Icon name="user" color={'#000'} size={30} />
+                        <Image
+                        style={styles.bottomTabIcon}
+                        source={require('../assets/imgs/Profile.png')                  
+                        }/>
                     ),
+                    tabBarLabel:() => {return null}
                 }}
                 />
             </Tab.Navigator>
         </NavigationContainer>
     )
   }
+
+  const styles = StyleSheet.create({
+    bottomTabIcon: {
+        width: 25,
+        height: 25, 
+        resizeMode: 'contain'
+    }
+  })
