@@ -6,6 +6,7 @@ import {
     Text,
     StyleSheet,
     TextInput,
+    Image,
     TouchableWithoutFeedback as TWF
 } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
@@ -33,7 +34,7 @@ class AddComment extends Component {
         if (this.state.editMode) {
             CommentArea = (
                 <View style={styles.container}>
-                    <TextInput placeholder='Pode comentar...'
+                    <TextInput placeholder='Comente aqui...'
                         style={styles.input} autoFocus={true}
                         value={this.state.comment}
                         onChangeText={comment => this.setState({ comment })}
@@ -47,7 +48,7 @@ class AddComment extends Component {
             CommentArea = (
                 <TWF onPress={() => this.setState({ editMode: true })}>
                     <View style={styles.container}>
-                        <Icon name='comment-o' size={25} color='#555' />
+                        <Image style={{ width: 20, height: 20 }} source={require('../../assets/imgs/comment.png')} />
                         <Text style={styles.caption}>
                             Adicione um comentário...
                         </Text>
@@ -81,7 +82,6 @@ const styles = StyleSheet.create({
         width: '90%'
     }
 })
-
 
 const mapStateToProps = ({ user }) => {
     return {

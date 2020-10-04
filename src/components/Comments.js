@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import {
     View,
     Text,
-    StyleSheet,
-    Alert
+    StyleSheet
 } from 'react-native'
 
 class Comments extends Component {
@@ -31,19 +30,19 @@ class Comments extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        margin: 10
+        margin: 5
     },
     commentContainer: {
         flexDirection: 'row',
-        marginTop: 5
+        marginTop: 1
     },
     nickname: {
         marginLeft: 5,
         fontWeight: 'bold',
-        color: '#444',
+        color: '#111111',
     },
     comment: {
-        color: '#555',
+        color: '#111111',
     }
 })
 

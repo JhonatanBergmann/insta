@@ -9,11 +9,10 @@ import {
     Image
 } from 'react-native'
 
-import icon from '../../assets/imgs/icon.png'
+import icon from '../../assets/imgs/logo.png'
 
 class Header extends Component {
     render() {
-        const name = this.props.name || 'Anonymous'
         const gravatar = this.props.email ?
             <Gravatar style={styles.avatar}
                 options={{ email:this.props.email, secure: true }} />
@@ -25,7 +24,6 @@ class Header extends Component {
                     <Text style={styles.title}>Insta</Text>
                 </View>
                 <View style={styles.userContainer}>
-                    <Text style={styles.user}>{name}</Text>
                     {gravatar}
                 </View>
             </View>
@@ -39,24 +37,31 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         marginTop: Platform.OS === 'ios' ? 20 : 0,
         padding: 10,
-        borderBottomWidth: 1,
-        borderColor: '#BBB',
-        width: '100%'
+        width: '100%',
+        backgroundColor: '#FAFAFA',
+        shadowOffset: {
+            width: 0,
+            height: 5,
+        },
+        shadowOpacity: 0.34,
+        shadowRadius: 6.27,
+        elevation: 10,
     },
     rowContainer: {
         flexDirection: 'row',
         alignItems: 'center'
     },
     image: {
-        height: 30,
-        width: 30,
+        height: 20,
+        width: 20,
         resizeMode: 'contain'
     },
     title: {
-        color: '#000',
-        fontFamily: 'shelter',
+        color: '#111111',
+        fontFamily: 'countryside',
         height: 30,
-        fontSize: 28
+        fontSize: 15,
+        marginLeft: 5
     },
     userContainer: {
         flexDirection: 'row',
@@ -69,7 +74,8 @@ const styles = StyleSheet.create({
     avatar: {
         width: 30,
         height: 30,
-        marginLeft: 10
+        marginLeft: 10,
+        borderRadius: 15
     }
 })
 
