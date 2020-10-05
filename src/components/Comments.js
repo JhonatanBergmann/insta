@@ -4,6 +4,7 @@ import {
     Text,
     StyleSheet
 } from 'react-native'
+import { heightPercentageToDP as hp } from 'react-native-responsive-screen'
 
 class Comments extends Component {
     render() {
@@ -40,9 +41,11 @@ const styles = StyleSheet.create({
         marginLeft: 5,
         fontWeight: 'bold',
         color: '#111111',
+        fontSize: hp('2.2%')
     },
     comment: {
         color: '#111111',
+        fontSize: hp('2%')
     }
 })
 

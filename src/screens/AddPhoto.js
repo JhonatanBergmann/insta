@@ -9,16 +9,19 @@ import {
     TextInput,
     Image,
     Dimensions,
-    Platform,
     ScrollView,
     Alert
 } from 'react-native'
 import ImagePicker from 'react-native-image-picker'
+import { 
+    widthPercentageToDP as wp, 
+    heightPercentageToDP as hp 
+} from 'react-native-responsive-screen'
 
 /* 
     CFG react-native-image-picker
 
-    -----------  --- no AndroidManifest.xml 
+    -----------  --- AndroidManifest.xml 
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -28,7 +31,7 @@ import ImagePicker from 'react-native-image-picker'
     >
     */
 
-const noUser = 'Você precisa estar logado para adicionar imagens'
+const noUser = 'Você precisa estar logado para adicionar imagens, entre agora mesmo para poder publicar algo.'
 
 class AddPhoto extends Component {
     state = {
@@ -53,7 +56,7 @@ class AddPhoto extends Component {
         }
 
         ImagePicker.showImagePicker({
-            title: 'Escolha a imagem',
+            title: 'Escolher Imagem',
             maxHeight: 600,
             maxWidth: 800
         }, res => {
@@ -83,15 +86,16 @@ class AddPhoto extends Component {
 
     render() {
         return (
-            <ScrollView>
+            <ScrollView style={{ backgroundColor: '#FFF' }}>
                 <View style={styles.container}>
-                    <View style={styles.imageContainer}>
+                    <Image style={styles.imageIcon} source={require('../../assets/imgs/AddPhoto.png')} />
+                    <View style={styles.imageContainer}>   
                         <Image source={this.state.image}
                             style={styles.image} />
                     </View>
                     <TouchableOpacity onPress={this.pickImage}
                         style={styles.buttom}>
-                        <Text style={styles.buttomText}>Escolha a foto</Text>
+                        <Text style={styles.buttomText}>Adicionar foto</Text>
                     </TouchableOpacity>
                     <TextInput placeholder='Algum comentário para a foto?'
                         style={styles.input} value={this.state.comment}
@@ -100,7 +104,7 @@ class AddPhoto extends Component {
                     <TouchableOpacity onPress={this.save}
                         disabled={this.props.loading}
                         style={[styles.buttom, this.props.loading ? styles.buttonDisabled : null]}>
-                        <Text style={styles.buttomText}>Salvar</Text>
+                        <Text style={styles.buttomText}>Publicar</Text>
                     </TouchableOpacity>
                 </View>
             </ScrollView>
@@ -112,13 +116,22 @@ const styles = StyleSheet.create({
     container: {
         flex: 1, 
         alignItems: 'center',
-        marginTop: 100
+        marginTop: 20,
+        backgroundColor: '#FFF'
+    },
+    imageIcon: {
+        opacity: 0.3,
+        resizeMode: 'contain',
+        alignItems:'center', 
+        justifyContent: 'center', 
+        width: wp('10%'), 
+        height: hp('10%')
     }, 
     imageContainer: {
         width: '90%',
         height: Dimensions.get('window').width / 2,
         backgroundColor: '#EEE',
-        marginTop: 10
+        marginTop: 30
     },
     image: {
         width: '100%',
@@ -126,15 +139,20 @@ const styles = StyleSheet.create({
         resizeMode: 'center'
     },
     buttom: {
+        alignItems: 'center',
+        justifyContent: 'center',
         marginTop: 20,
+        width: wp('90%'), 
+        height: wp('15%'),
         padding: 10,
         backgroundColor: '#FAFAFA',
         borderWidth: 1,
         borderColor: '#D6D6D6',
-        borderRadius: 5
+        borderRadius: 5,
+        opacity: 0.9
     }, 
     buttomText: {
-        fontSize: 20,
+        fontSize: hp('2.5%'),
         color: '#545454'
     },
     input: {
@@ -142,7 +160,8 @@ const styles = StyleSheet.create({
         width: '90%', 
         borderWidth: 0.2,
         borderColor: '#D6D6D6',
-        textAlign: 'center'
+        textAlign: 'center',
+        height: wp('15%')
     }, 
     buttonDisable: {
         backgroundColor: '#AAA'

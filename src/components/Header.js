@@ -4,12 +4,14 @@ import { Gravatar } from 'react-native-gravatar'
 import {
     StyleSheet,
     Text,
-    View,
-    Platform,
-    Image
+    View
 } from 'react-native'
+import { 
+    widthPercentageToDP as wp, 
+    heightPercentageToDP as hp 
+} from 'react-native-responsive-screen'
 
-import icon from '../../assets/imgs/logo.png'
+import Icon from 'react-native-vector-icons/SimpleLineIcons'
 
 class Header extends Component {
     render() {
@@ -20,7 +22,7 @@ class Header extends Component {
         return (
             <View style={styles.container}>
                 <View style={styles.rowContainer}>
-                    <Image source={icon} style={styles.image}/>
+                    <Icon style={{ opacity: 0.3 }} name='social-instagram' size={hp('3.2%')} color={'#111111'} />
                     <Text style={styles.title}>Insta</Text>
                 </View>
                 <View style={styles.userContainer}>
@@ -35,33 +37,28 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginTop: Platform.OS === 'ios' ? 20 : 0,
         padding: 10,
         width: '100%',
         backgroundColor: '#FAFAFA',
         shadowOffset: {
             width: 0,
-            height: 5,
+            height: 5
         },
         shadowOpacity: 0.34,
         shadowRadius: 6.27,
-        elevation: 10,
+        elevation: 10
     },
     rowContainer: {
         flexDirection: 'row',
         alignItems: 'center'
     },
-    image: {
-        height: 20,
-        width: 20,
-        resizeMode: 'contain'
-    },
     title: {
         color: '#111111',
         fontFamily: 'countryside',
         height: 30,
-        fontSize: 15,
-        marginLeft: 5
+        fontSize: hp('2.5%'),
+        marginLeft: 10,
+        opacity: 0.3 
     },
     userContainer: {
         flexDirection: 'row',
@@ -72,8 +69,8 @@ const styles = StyleSheet.create({
         color: '#888'
     },
     avatar: {
-        width: 30,
-        height: 30,
+        width: wp('5%'),
+        height: hp('5%'),
         marginLeft: 10,
         borderRadius: 15
     }

@@ -1,13 +1,19 @@
 import React, { Component } from 'react'
 import {
-    View,
     Text,
     StyleSheet,
     TouchableOpacity,
-    TextInput
+    TextInput,
+    ImageBackground
 } from 'react-native'
 import { connect } from 'react-redux'
 import { createUser } from '../store/actions/user'
+import { 
+    widthPercentageToDP as wp, 
+    heightPercentageToDP as hp 
+} from 'react-native-responsive-screen'
+
+import backgroudImage from '../../assets/imgs/Register.jpg'
 
 class Register extends Component {
     state = {
@@ -29,7 +35,7 @@ class Register extends Component {
 
     render() {
         return (
-            <View style={styles.container}>
+            <ImageBackground style={styles.container} source={backgroudImage} >
                 <TextInput placeholder='Nome' style={styles.input}
                     autoFocus={true} value={this.state.name}
                     onChangeText={name => this.setState({ name })} />
@@ -44,7 +50,7 @@ class Register extends Component {
                     style={styles.buttom}>
                     <Text style={styles.buttomText}>Salvar</Text>
                 </TouchableOpacity>
-            </View>
+            </ImageBackground>
         )
     }
 }
@@ -57,26 +63,32 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFF'
     },
     buttom: {
+        alignItems: 'center',
+        justifyContent: 'center',
         marginTop: 20,
+        width: wp('90%'), 
+        height: wp('15%'),
         padding: 10,
         backgroundColor: '#FAFAFA',
         borderWidth: 1,
         borderColor: '#D6D6D6',
-        borderRadius: 5
+        borderRadius: 5,
+        opacity: 0.9
     },
     buttomText: {
-        fontSize: 20,
+        fontSize: hp('2.5%'),
         color: '#545454'
     },
     input: {
         marginTop: 10,
         width: '90%',
         backgroundColor: '#FAFAFA',
-        height: 40,
+        height: wp('15%'),
         borderWidth: 1,
         borderColor: '#D6D6D6',
         paddingLeft: 15,
-        borderRadius: 5
+        borderRadius: 5,
+        opacity: 0.6
     }
 })
 

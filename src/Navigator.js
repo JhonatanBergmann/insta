@@ -1,8 +1,9 @@
 import React from 'react'
-import { StyleSheet, Image } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { heightPercentageToDP as hp } from 'react-native-responsive-screen'
+import Ionicons from 'react-native-vector-icons/Ionicons'
 
 import StatusBar from './components/StatusBar'
 
@@ -36,8 +37,9 @@ function loginOrProfileRouter() {
             options={{ 
                 title: 'Registrar',
                 headerShown: true,
-                headerTintColor: '#111111',
+                headerTintColor: '#B3B3B3',
                 headerTitleAlign: 'center',
+                headerTitleStyle: { fontSize: hp('2.5%') },
                 headerStyle: { backgroundColor: '#FAFAFA' }
             }}
             />
@@ -51,6 +53,34 @@ export default function MenuRoutes() {
         <NavigationContainer>
             <StatusBar />
             <Tab.Navigator
+                screenOptions={({ route }) => ({
+                    tabBarIcon: ({ focused, color, size }) => {
+                      let iconName
+          
+                      if (route.name === 'Feed') {
+                        iconName = focused
+                            ? 'home-sharp'
+                            : 'home-outline'
+                      } else if (route.name === 'AddPhoto') {
+                        iconName = focused 
+                            ? 'camera' 
+                            : 'camera-outline'
+                      } else if (route.name === 'Profile') {
+                        iconName = focused 
+                            ? 'person' 
+                            : 'person-outline'
+                      }
+          
+                      // You can return any component that you like here!
+                      return <Ionicons 
+                        style={{ opacity: 0.3 }} 
+                        name={iconName} 
+                        size={hp('4%')} 
+                        color={'#111111'} 
+                      />
+                    },
+                  })}
+                  
                 tabBarOptions= {{
                     style: {
                         backgroundColor: '#FAFAFA',
@@ -63,12 +93,6 @@ export default function MenuRoutes() {
                     component={Feed}
                     options={{
                     tabBarLabel: 'Feed',
-                    tabBarIcon: ({ }) => (
-                        <Image
-                        style={styles.bottomTabIcon}
-                        source={require('../assets/imgs/Feed.png')                  
-                        }/>
-                    ),
                     tabBarLabel:() => {return null}
                 }}
                 />
@@ -77,12 +101,6 @@ export default function MenuRoutes() {
                     component={AddPhoto}
                     options={{
                     tabBarLabel: 'Add Picture',
-                    tabBarIcon: ({ }) => (
-                        <Image
-                        style={styles.bottomTabIcon}
-                        source={require('../assets/imgs/AddPhoto.png')                  
-                        }/>
-                    ),
                     tabBarLabel:() => {return null}
                 }}
                 />
@@ -91,12 +109,6 @@ export default function MenuRoutes() {
                     component={loginOrProfileRouter}
                     options={{
                     tabBarLabel: 'Profile',
-                    tabBarIcon: ({ }) => (
-                        <Image
-                        style={styles.bottomTabIcon}
-                        source={require('../assets/imgs/Profile.png')                  
-                        }/>
-                    ),
                     tabBarLabel:() => {return null}
                 }}
                 />
@@ -104,11 +116,3 @@ export default function MenuRoutes() {
         </NavigationContainer>
     )
   }
-
-  const styles = StyleSheet.create({
-    bottomTabIcon: {
-        width: 25,
-        height: 25, 
-        resizeMode: 'contain'
-    }
-  })

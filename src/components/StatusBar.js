@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import {
-    StatusBar, View
+    StatusBar, 
+    View
 } from 'react-native'
 
-class StatusBarDark extends Component {
+class StatusBarApp extends Component {
     render() {
         return (
             <View>
@@ -16,4 +17,4 @@ class StatusBarDark extends Component {
     }
 }
 
-export default StatusBarDark
+export default StatusBarApp
