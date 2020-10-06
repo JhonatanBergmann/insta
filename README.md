@@ -7,12 +7,11 @@
 <p align="center">
   <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/JhonatanBergmann/Insta" />
   <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/JhonatanBergmann/Insta" />
-  <img alt="" src="https://img.shields.io/github/repo-size/JhonatanBergmann/Insta" />
   <img alt="GitHub Package.json Version" src="https://img.shields.io/github/package-json/v/JhonatanBergmann/Insta" />
   <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/JhonatanBergmann/Insta" />
 </p>
 
-<p align="center">Rede social de compartilhamento de fotos</p>
+<p align="center">Rede social para compartilhamento de fotos</p>
 
 <p align="center">
   <img src="forREADME/Feed.gif" alt="Demo">
