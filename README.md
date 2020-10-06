@@ -17,8 +17,8 @@
   <img src="forREADME/Feed.gif" alt="Demo">
 </p>
 <p align="center">
+  <img src="forREADME/Login.gif" alt="Demo" width="350" height="580">
   <img src="forREADME/Register.gif" alt="Demo" width="350" height="580">
-  <img src="forREADME/Camera.gif" alt="Demo" width="350" height="580">
 </p>
 
 ## 📅 Sobre

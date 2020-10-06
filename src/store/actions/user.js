@@ -81,7 +81,7 @@ export const login = user => {
             .catch(err => {
                 dispatch(setMessage({
                     title: 'Poxa!',
-                    text: 'Verifique seu email e senha, pois algum desses deve de estar errado. Tente novamente.sad'
+                    text: 'Verifique seu email e senha, pois algum desses deve de estar errado. Tente novamente!'
                 }))
             })
             .then(res => {
