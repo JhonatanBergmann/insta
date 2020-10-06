@@ -20,12 +20,16 @@
   <img src="forREADME/Login.gif" alt="Demo" width="350" height="580">
   <img src="forREADME/Register.gif" alt="Demo" width="350" height="580">
 </p>
+<p align="center">
+  <img src="forREADME/ScreenshotErr4541.png" alt="err" width="200" height="350">
+  <img src="forREADME/ScreenshotErr2455.png" alt="err" width="200" height="350">
+   <img src="forREADME/ScreenshotErr354.png" alt="err" width="200" height="350">
+</p>
+
 
 ## 📅 Sobre
 
-o App Insta é uma rede social online de compartilhamento de fotos entre usuários, que permite também comentar postagens.
-<br>
-Não é um clone de layout do Instagram. Insta é um app totalmente funcional, integrado com o Firebase.
+O App Insta é uma rede social online de compartilhamento de fotos entre usuários.
 
 ## 🛠 Tecnologias
 - [React Native](https://facebook.github.io/react-native/)
@@ -70,6 +74,16 @@ react-native run-android
 ```
 
 ## 🛢  Firebase 
+
+em funcions\index.js :
+```sh
+const storage = new Storage({
+    projectId: 'id-aqui'
+    keyFilename: 'key-aqui.json'
+})
+try {
+  const bucket = storage.bucket('bucket-aqui.com')
+```
 Chave de API da Web:
 ```sh
 src\store\actions\user.js
@@ -79,15 +93,6 @@ const API_KEY = 'API_KEY'
 Gerar chaves secretas do banco de dados
 ```sh
 funcions\arquivo-chaves.js
-```
-Adicionar funcions\index.js :
-```sh
-const storage = new Storage({
-    projectId: 'id-aqui'
-    keyFilename: 'key-aqui.json'
-})
-try {
-  const bucket = storage.bucket('...')
 ```
 
 ## 📝 Licença
