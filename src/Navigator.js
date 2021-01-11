@@ -15,104 +15,104 @@ import Register from './screens/Register'
 
 const Stack = createStackNavigator()
 function loginOrProfileRouter() {
-    return (
-        <Stack.Navigator>
-            <Stack.Screen 
-            name='Login'
-            component={Login}
-            options={{ 
-                headerShown: false
-            }}
-            />
-            <Stack.Screen 
-            name='Profile'
-            component={Profile}
-            options={{ 
-                headerShown: false 
-            }}
-            />
-             <Stack.Screen 
-            name='Register'
-            component={Register}
-            options={{ 
-                title: 'Registrar',
-                headerShown: true,
-                headerTintColor: '#B3B3B3',
-                headerTitleAlign: 'center',
-                headerTitleStyle: { fontSize: hp('2.5%') },
-                headerStyle: { backgroundColor: '#FAFAFA' }
-            }}
-            />
-        </Stack.Navigator>
-    )
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name='Login'
+        component={Login}
+        options={{
+          headerShown: false
+        }}
+      />
+      <Stack.Screen
+        name='Profile'
+        component={Profile}
+        options={{
+          headerShown: false
+        }}
+      />
+      <Stack.Screen
+        name='Register'
+        component={Register}
+        options={{
+          title: 'Registrar',
+          headerShown: true,
+          headerTintColor: '#B3B3B3',
+          headerTitleAlign: 'center',
+          headerTitleStyle: { fontSize: hp('2.5%') },
+          headerStyle: { backgroundColor: '#FAFAFA' }
+        }}
+      />
+    </Stack.Navigator>
+  )
 }
 
 const Tab = createBottomTabNavigator()
 export default function MenuRoutes() {
-    return (
-        <NavigationContainer>
-            <StatusBar />
-            <Tab.Navigator
-                screenOptions={({ route }) => ({
-                    tabBarIcon: ({ focused, color, size }) => {
-                      let iconName
-          
-                      if (route.name === 'Feed') {
-                        iconName = focused
-                            ? 'home-sharp'
-                            : 'home-outline'
-                      } else if (route.name === 'AddPhoto') {
-                        iconName = focused 
-                            ? 'camera' 
-                            : 'camera-outline'
-                      } else if (route.name === 'Profile') {
-                        iconName = focused 
-                            ? 'person' 
-                            : 'person-outline'
-                      }
-          
-                      // You can return any component that you like here!
-                      return <Ionicons 
-                        style={{ opacity: 0.3 }} 
-                        name={iconName} 
-                        size={hp('4%')} 
-                        color={'#111111'} 
-                      />
-                    },
-                  })}
-                  
-                tabBarOptions= {{
-                    style: {
-                        backgroundColor: '#FAFAFA',
-                        tabBarLabel: false
-                    }
-                }}
-                >
-                <Tab.Screen
-                    name='Feed'
-                    component={Feed}
-                    options={{
-                    tabBarLabel: 'Feed',
-                    tabBarLabel:() => {return null}
-                }}
-                />
-                <Tab.Screen
-                    name='AddPhoto'
-                    component={AddPhoto}
-                    options={{
-                    tabBarLabel: 'Add Picture',
-                    tabBarLabel:() => {return null}
-                }}
-                />
-                <Tab.Screen
-                    name='Profile'
-                    component={loginOrProfileRouter}
-                    options={{
-                    tabBarLabel: 'Profile',
-                    tabBarLabel:() => {return null}
-                }}
-                />
-            </Tab.Navigator>
-        </NavigationContainer>
-    )
-  }
+  return (
+    <NavigationContainer>
+      <StatusBar />
+      <Tab.Navigator
+        screenOptions={({ route }) => ({
+          tabBarIcon: ({ focused, color, size }) => {
+            let iconName
+
+            if (route.name === 'Feed') {
+              iconName = focused
+                ? 'home-sharp'
+                : 'home-outline'
+            } else if (route.name === 'AddPhoto') {
+              iconName = focused
+                ? 'camera'
+                : 'camera-outline'
+            } else if (route.name === 'Profile') {
+              iconName = focused
+                ? 'person'
+                : 'person-outline'
+            }
+
+            // You can return any component that you like here!
+            return <Ionicons
+              style={{ opacity: 0.3 }}
+              name={iconName}
+              size={hp('4%')}
+              color={'#111111'}
+            />
+          },
+        })}
+
+        tabBarOptions={{
+          style: {
+            backgroundColor: '#FAFAFA',
+            tabBarLabel: false
+          }
+        }}
+      >
+        <Tab.Screen
+          name='Feed'
+          component={Feed}
+          options={{
+            tabBarLabel: 'Feed',
+            tabBarLabel: () => { return null }
+          }}
+        />
+        <Tab.Screen
+          name='AddPhoto'
+          component={AddPhoto}
+          options={{
+            tabBarLabel: 'Add Picture',
+            tabBarLabel: () => { return null }
+          }}
+        />
+        <Tab.Screen
+          name='Profile'
+          component={loginOrProfileRouter}
+          options={{
+            tabBarLabel: 'Profile',
+            tabBarLabel: () => { return null }
+          }}
+        />
+      </Tab.Navigator>
+    </NavigationContainer>
+  )
+}
