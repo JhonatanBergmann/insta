@@ -57,7 +57,7 @@ Para executar o projeto é necessário que você tenha o ambiente React Native c
 Depois de configurar o ambiente, basta fazer o clone do projeto:
 
 ```sh
-git clone https://github.com/JhonatanBergmann/Insta.git
+git clone https://github.com/JhonatanBergmann/insta.git
 ```
 
 Entre na pasta do projeto e execute o comando para instalar as dependências do projeto:
