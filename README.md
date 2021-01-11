@@ -26,15 +26,18 @@
    <img src="forREADME/ScreenshotErr354.png" alt="err" width="200" height="350">
 </p>
 
-
 ## 📅 Sobre
 
 O App Insta é uma rede social online de compartilhamento de fotos entre usuários.
+
+## > Status do Projeto: Em desenvolvimento :warning:
+...
 
 ## 🛠 Tecnologias
 - [React Native](https://facebook.github.io/react-native/)
 - [Javascript](https://devdocs.io/javascript/)
 - [Node](https://nodejs.org/en/)
+<br/>-
 - [firebase](https://firebase.google.com/?hl=pt-br)
 - [Redux](https://redux.js.org/)
 - [Axios](https://github.com/axios/axios)
@@ -44,6 +47,8 @@ O App Insta é uma rede social online de compartilhamento de fotos entre usuári
 - [@react-navigation/native](https://reactnavigation.org/)
 - [@react-navigation/stack](https://reactnavigation.org/docs/stack-navigator/)
 - [@react-navigation/bottom-tabs](https://reactnavigation.org/docs/tab-based-navigation/)
+
+*Foram usados outros Frameworks no projeto, mas esses são os principais.*
 
 ## 📱 Executando 
 
