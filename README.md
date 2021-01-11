@@ -4,6 +4,9 @@
   Insta
 </h1>
 
+## > Status do Projeto: Em desenvolvimento :warning:
+...
+
 <p align="center">
   <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/JhonatanBergmann/Insta" />
   <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/JhonatanBergmann/Insta" />
@@ -29,9 +32,6 @@
 ## 📅 Sobre
 
 O App Insta é uma rede social online de compartilhamento de fotos entre usuários.
-
-## > Status do Projeto: Em desenvolvimento :warning:
-...
 
 ## 🛠 Tecnologias
 - [React Native](https://facebook.github.io/react-native/)
