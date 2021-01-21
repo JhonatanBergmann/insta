@@ -26,7 +26,7 @@
 <p align="center">
   <img src="forREADME/ScreenshotErr4541.png" alt="err" width="200" height="350">
   <img src="forREADME/ScreenshotErr2455.png" alt="err" width="200" height="350">
-   <img src="forREADME/ScreenshotErr354.png" alt="err" width="200" height="350">
+  <img src="forREADME/ScreenshotErr354.png" alt="err" width="200" height="350">
 </p>
 
 ## 📅 Sobre
@@ -43,7 +43,7 @@ O App Insta é uma rede social online de compartilhamento de fotos entre usuári
 - [Axios](https://github.com/axios/axios)
 - [React Native Image Picker](https://github.com/react-native-image-picker/react-native-image-picker)
 - [React Native Responsive Screen](https://www.npmjs.com/package/react-native-responsive-screen)
-- [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
+- [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
 - [@react-navigation/native](https://reactnavigation.org/)
 - [@react-navigation/stack](https://reactnavigation.org/docs/stack-navigator/)
 - [@react-navigation/bottom-tabs](https://reactnavigation.org/docs/tab-based-navigation/)
