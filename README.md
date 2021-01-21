@@ -78,28 +78,6 @@ Android:
 react-native run-android
 ```
 
-## 🛢  Firebase 
-
-em funcions\index.js :
-```sh
-const storage = new Storage({
-    projectId: 'id-aqui'
-    keyFilename: 'key-aqui.json'
-})
-try {
-  const bucket = storage.bucket('bucket-aqui.com')
-```
-Chave de API da Web:
-```sh
-src\store\actions\user.js
-const API_KEY = 'API_KEY'
-```
-
-Gerar chaves secretas do banco de dados
-```sh
-funcions\arquivo-chaves.js
-```
-
 ## 📝 Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
