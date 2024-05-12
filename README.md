@@ -48,7 +48,7 @@ O App Insta é uma rede social online de compartilhamento de fotos entre usuári
 - [@react-navigation/stack](https://reactnavigation.org/docs/stack-navigator/)
 - [@react-navigation/bottom-tabs](https://reactnavigation.org/docs/tab-based-navigation/)
 
-*Foram usados outros Frameworks no projeto, mas esses são os principais.*
+*Foram usados outros, mas esses são os principais.*
 
 ## 📱 Executando 
 
@@ -57,7 +57,7 @@ Para executar o projeto é necessário que você tenha o ambiente React Native c
 Depois de configurar o ambiente, basta fazer o clone do projeto:
 
 ```sh
-git clone https://github.com/JhonatanBergmann/insta.git
+git clone https://github.com/jhonbergmann/insta.git
 ```
 
 Entre na pasta do projeto e execute o comando para instalar as dependências do projeto:
