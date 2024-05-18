@@ -4,8 +4,9 @@
   Insta
 </h1>
 
-## > Status do Projeto: Em desenvolvimento :warning:
-...
+<p align="center">
+Status: Em desenvolvimento :warning:
+</p>
 
 <p align="center">
   <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/JhonatanBergmann/Insta" />
@@ -36,19 +37,6 @@ O App Insta é uma rede social online de compartilhamento de fotos entre usuári
 ## 🛠 Tecnologias
 - [React Native](https://facebook.github.io/react-native/)
 - [Javascript](https://devdocs.io/javascript/)
-- [Node](https://nodejs.org/en/)
-<br/>-
-- [firebase](https://firebase.google.com/?hl=pt-br)
-- [Redux](https://redux.js.org/)
-- [Axios](https://github.com/axios/axios)
-- [React Native Image Picker](https://github.com/react-native-image-picker/react-native-image-picker)
-- [React Native Responsive Screen](https://www.npmjs.com/package/react-native-responsive-screen)
-- [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
-- [@react-navigation/native](https://reactnavigation.org/)
-- [@react-navigation/stack](https://reactnavigation.org/docs/stack-navigator/)
-- [@react-navigation/bottom-tabs](https://reactnavigation.org/docs/tab-based-navigation/)
-
-*Foram usados outros, mas esses são os principais.*
 
 ## 📱 Executando 
 
